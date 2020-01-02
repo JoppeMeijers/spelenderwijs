@@ -21,6 +21,7 @@ import {getUser} from './src/api/usersApi';
 import questionScreen from './src/qrflow/questionScreen';
 import controlScreen from './src/qrflow/controlScreen';
 import homeScreen from './src/homeScreen';
+import documentScreen from './src/documentScreen';
 
 
 console.log(getUser);
@@ -30,9 +31,10 @@ const HomeStack = createStackNavigator({
     Home: {
       screen: homeScreen,
       navigationOptions: {
-        headerTitle: <Image source={Logo} />,
+        headerTitle: 'Home',
+        headerTintColor: '#fff',
         headerStyle: {
-          backgroundColor: '#7E4338',
+          backgroundColor: '#FE406B',
   
         },
 
@@ -46,9 +48,9 @@ const HomeStack = createStackNavigator({
     Snipe: {
       screen: CoffeeScreen,
       navigationOptions:{
-          headerTitle: <Image source={Logo} />,
+          headerTitle: 'Documenten',
         headerStyle: {
-          backgroundColor: '#7E4338',
+          backgroundColor: '#FE406B',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -58,16 +60,18 @@ const HomeStack = createStackNavigator({
     }
   });
 
-  const QrStack = createStackNavigator({
+  const DocumentStack = createStackNavigator({
 
-    Scan: {
-        screen: ScanScreen,
+    Documents: {
+        screen: documentScreen,
         navigationOptions: {
-          headerTitle: <Image source={Logo} />,
-          headerStyle: {
-            backgroundColor: '#7E4338',
+            headerTitle: 'Documenten',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: '#FE406B',
+      
+            },
     
-          },
       
          
          
@@ -79,7 +83,7 @@ const HomeStack = createStackNavigator({
         navigationOptions:{
             headerTitle: <Image source={Logo} />,
           headerStyle: {
-            backgroundColor: '#7E4338',
+            backgroundColor: '#FE406B',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -92,7 +96,7 @@ const HomeStack = createStackNavigator({
           navigationOptions:{
               headerTitle: <Image source={Logo} />,
             headerStyle: {
-              backgroundColor: '#7E4338',
+              backgroundColor: '#FE406B',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -105,7 +109,7 @@ const HomeStack = createStackNavigator({
                 navigationOptions:{
                     headerTitle: <Image source={Logo} />,
                   headerStyle: {
-                    backgroundColor: '#7E4338',
+                    backgroundColor: '#FE406B',
                   },
                   headerTintColor: '#fff',
                   headerTitleStyle: {
@@ -123,7 +127,7 @@ const HomeStack = createStackNavigator({
         navigationOptions: {
           headerTitle: <Image source={Logo} />,
           headerStyle: {
-            backgroundColor: '#7E4338',
+            backgroundColor: '#FE406B',
     
           },
       
@@ -137,7 +141,7 @@ const HomeStack = createStackNavigator({
           navigationOptions:{
               headerTitle: <Image source={Logo} />,
             headerStyle: {
-              backgroundColor: '#7E4338',
+              backgroundColor: '#FE406B',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -160,36 +164,24 @@ const HomeStack = createStackNavigator({
       header: null //this will hide the header
   
     },
-    Location: {
-      screen: LocationScreen,
+  Documents: {
+      screen: DocumentStack,
       navigationOptions:({navigation})=>({
-         tabBarLabel:"Routes",
+         tabBarLabel:"Documenten",
           tabBarIcon: ({ tintColor }) => (
-          < Icon  name="map" size={22} color="#000"/>
+          < Icon  name="file" size={22} color="#000"/>
           )
       ,
-        headerTitle: <Image source={Logo} />,
+        headerTitle: 'Documenten',
+        headerTintColor: '#fff',
         headerStyle: {
-          backgroundColor: '#7E4338',
+          backgroundColor: '#FE406B',
   
         },
+
       })
     },
-    Scan: {
-        screen: QrStack,
-        navigationOptions:({navigation})=>({
-           tabBarLabel:"Scan",
-            tabBarIcon: ({ tintColor }) => (
-            < Icon  name="qrcode" size={22} color="#000"/>
-            )
-        ,
-          headerTitle: <Image source={Logo} />,
-          headerStyle: {
-            backgroundColor: '#7E4338',
-    
-          },
-        })
-      },
+
     Profile: {
         screen: ProfileStack ,
         navigationOptions:{
@@ -209,7 +201,7 @@ const HomeStack = createStackNavigator({
           ,
             headerTitle: <Image source={Logo} />,
             headerStyle: {
-              backgroundColor: '#7E4338',
+              backgroundColor: '#FE406B',
       
             },
           })
