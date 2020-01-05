@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet,ScrollView, Text, ViewScrollView, Dimensions, View, FlatList, Image, Button} from 'react-native';
+import {Platform, StyleSheet,ScrollView, Text, ViewScrollView, Dimensions, View, FlatList, Image, Button,TouchableOpacity} from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { ListItem, Card, Icon, Avatar } from 'react-native-elements';
 
@@ -27,24 +27,25 @@ class documentScreen extends Component {
         <SafeAreaView>
            
           <View style={styles.container}>
-          
-          <View style={styles.cards}>
-          <View style={styles.leftcolum}>
-          <Avatar
-            rounded
-            icon={{name: 'file',color: 'grey', type: 'font-awesome'}}
-            overlayContainerStyle={{backgroundColor: 'white', borderColor: 'grey', borderStyle:'solid', borderWidth: 2}}
-          />
-          </View>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Details',{})}>
+          <View style={styles.cards} onPress={() =>this.props.navigation.navigate('Details',{output: result.data})}>
+            <View style={styles.leftcolum}>
+              <Avatar
+                rounded
+                icon={{name: 'file',color: 'grey', type: 'font-awesome'}}
+                overlayContainerStyle={{backgroundColor: 'white', borderColor: 'grey', borderStyle:'solid', borderWidth: 2}}
+              />
+            </View>
             <View style={styles.middlecolum}>
               <Text style={styles.title}>Ouderbrief sept.</Text>
               <Text style={styles.undertitle}>01-01-2024</Text>
             </View>
-            <View style={styles.rightcolum}>
-            <Icon name='arrow-forward' />
+            <View style={styles.rightcolum} onPress={() => this.props.navigation.navigate('Details',{})}>
+              <Icon name='arrow-forward' />
             </View>
 
           </View>
+          </TouchableOpacity>
 
           {/*  delete this cards after loop works */}
 
@@ -66,22 +67,23 @@ class documentScreen extends Component {
 
           </View>
 
+
+
           <View style={styles.cards}>
-          <View style={styles.leftcolum}>
-          <Avatar
-            rounded
-            icon={{name: 'file',color: 'grey', type: 'font-awesome'}}
-            overlayContainerStyle={{backgroundColor: 'white', borderColor: 'grey', borderStyle:'solid', borderWidth: 2}}
-          />
-          </View>
+            <View style={styles.leftcolum}>
+              <Avatar
+                rounded
+                icon={{name: 'file',color: 'grey', type: 'font-awesome'}}
+                overlayContainerStyle={{backgroundColor: 'white', borderColor: 'grey', borderStyle:'solid', borderWidth: 2}}
+              />
+            </View>
             <View style={styles.middlecolum}>
               <Text style={styles.title}>Ouderbrief nov.</Text>
               <Text style={styles.undertitle}>01-01-2024</Text>
             </View>
             <View style={styles.rightcolum}>
-            <Icon name='arrow-forward' />
+              <Icon name='arrow-forward' />
             </View>
-
           </View>
 
           <View style={styles.cards}>

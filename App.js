@@ -22,6 +22,7 @@ import questionScreen from './src/qrflow/questionScreen';
 import controlScreen from './src/qrflow/controlScreen';
 import homeScreen from './src/homeScreen';
 import documentScreen from './src/documentScreen';
+import documentDetailScreen from './src/documentDetailScreen';
 
 
 console.log(getUser);
@@ -71,17 +72,13 @@ const HomeStack = createStackNavigator({
               backgroundColor: '#FE406B',
       
             },
-    
-      
-         
-         
           //header: null //this will hide the header
         },
       },
-    Information: {
-        screen: informationScreen,
+    Details: {
+        screen: documentDetailScreen,
         navigationOptions:{
-            headerTitle: <Image source={Logo} />,
+            headerTitle: 'Documenten',
           headerStyle: {
             backgroundColor: '#FE406B',
           },
@@ -185,16 +182,16 @@ const HomeStack = createStackNavigator({
     Profile: {
         screen: ProfileStack ,
         navigationOptions:{
-          tabBarLabel:"Account",
+          tabBarLabel:"Info",
           tabBarIcon: ({ tintColor }) => (
-            <Icon  name="user" size={22} color="#000"/>
+            <Icon  name="info" size={22} color="#000"/>
           )
         }
       },
     Settings: {
           screen: ScanScreen,
           navigationOptions:({navigation})=>({
-             tabBarLabel:"Instellingen",
+             tabBarLabel:"Afmelden",
               tabBarIcon: ({ tintColor }) => (
               < Icon  name="cog" size={22} color="#000"/>
               )
