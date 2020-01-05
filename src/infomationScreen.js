@@ -15,7 +15,7 @@ const list = [
 
   ]
 
-class documentDetailScreen extends Component {
+class informationScreen extends Component {
 
 
     render() {
@@ -24,33 +24,27 @@ class documentDetailScreen extends Component {
       };
       return (
         <ScrollView>
+                <View style={styles.cardFirst}>
+                    <View style={styles.leftcolumfirst}>
+                        <Text style={styles.textfirst}>UKKEPUK | Sittard</Text>
+                    </View>
+                    <View style={styles.rightcolumfirst}>
+                        <Image source={require( './assets/images/all/bunny.png')} style={{position: 'absolute', right: -20,width: 140, height: 205}}/>
+                    </View>
+                </View>
     
                 <View style={styles.container}>
-                    <Text style={styles.title}>Ouderbrief sept.</Text>
-                    <Text style={styles.date}>01-01-2024</Text>
 
-                    {/* loop text  */}
-
-                    <Text style={styles.subtitle}>Over Ukke Puk</Text>
-                    <Text style={styles.continuText}>
-                        Bij peutercentrum Ukkepuk is altijd wel iets te beleven; elke dag is een avontuur! Bij ons vindt uw kind veiligheid, warmte, uitdaging en persoonlijke aandacht. Een goede basis voor groei en ontwikkeling. Alle kinderen hebben hun eigen talenten en bij ons krijgenze de ruimte om die te ontwikkelen. Dit kunnen ze samen doen met ons vriendje Puk. Hij speelt een belangrijke rol in de onderwijsmethodiek Uk en Puk die wij gebruiken.
-                    </Text>
-                    <Text style={styles.subtitle}>Over Ukke Puk</Text>
-                    <Text style={styles.continuText}>
-                        Bij peutercentrum Ukkepuk is altijd wel iets te beleven; elke dag is een avontuur! Bij ons vindt uw kind veiligheid, warmte, uitdaging en persoonlijke aandacht. Een goede basis voor groei en ontwikkeling. Alle kinderen hebben hun eigen talenten en bij ons krijgenze de ruimte om die te ontwikkelen. Dit kunnen ze samen doen met ons vriendje Puk. Hij speelt een belangrijke rol in de onderwijsmethodiek Uk en Puk die wij gebruiken.
-                    </Text>
                     <View style={styles.cardLast}>
-            <View style={styles.leftcolumlast}>
-              <Text style={styles.textLast}>Meer documenten lezen?</Text>
-              <Button title={'klik hier'}  color="#095382"/>
-            </View>
-            <View style={styles.rightcolumlast}>
-               <Image source={require( './assets/images/all/crocodile-great.png')} style={{ marginBottom: -20,width: 140, height: 142}}/>
-            </View>
-          </View>
-                    <View  style={styles.footer} >
-                        <Image style={{ width: 110,height: 50, marginBottom: 20, marginTop:10,}} source={require('./assets/images/all/spelenderwijs.png')} />
+                        <View style={styles.leftcolumlast}>
+                            <Text style={styles.textLast}>Meer documenten lezen?</Text>
+                            <Button title={'klik hier'}  color="#095382"/>
+                        </View>
+                            <View style={styles.rightcolumlast}>
+                            <Image source={require( './assets/images/all/crocodile-great.png')} style={{ marginBottom: -20,width: 140, height: 142}}/>
+                        </View>
                     </View>
+
                 </View>
         </ScrollView>
     
@@ -101,7 +95,7 @@ class documentDetailScreen extends Component {
     cardLast:{
         backgroundColor: '#FE406A',
         borderRadius: 10,
-        marginTop: 20,
+        marginTop: 40,
         marginRight: 10,
         marginLeft: 10,
         marginBottom: 30,
@@ -129,8 +123,43 @@ class documentDetailScreen extends Component {
         fontSize: 20,
         fontWeight: 'bold',
         paddingBottom: 15,
+      },
+      cardFirst:{
+        backgroundColor: '#FE406A',
+        borderRadius: 10,
+        borderTopLeftRadius:0,
+        borderTopRightRadius: 0,
+        marginTop: 0,
+        marginRight: 0,
+        marginLeft: 0,
+        marginBottom: 30,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start'
+      },
+      leftcolumfirst:{
+        width: '50%',
+        paddingTop: 4,
+      },
+      rightcolumfirst:{
+        width: '50%',
+        paddingTop:10,
+        paddingLeft:10,
+        paddingBottom: -20,
+
+      },
+      textfirst:{
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginTop: 90,
       }
    
   });
   
-  export default documentDetailScreen;
+  export default informationScreen;

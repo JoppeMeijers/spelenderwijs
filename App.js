@@ -9,7 +9,7 @@ import CoffeeScreen from './src/coffeeloversScreen';
 import ProfileScreen from './src/profileSceen';
 import ReviewScreen from './src/reviewScreen';
 import ScanScreen from './src/qrScreen';
-import informationScreen from './src/qrflow/infomationScreen';
+
 
 import Logo from './src/assets/images/header/logo-coffeesnipe.png';
 
@@ -23,6 +23,7 @@ import controlScreen from './src/qrflow/controlScreen';
 import homeScreen from './src/homeScreen';
 import documentScreen from './src/documentScreen';
 import documentDetailScreen from './src/documentDetailScreen';
+import informationScreen from './src/infomationScreen';
 
 
 console.log(getUser);
@@ -179,8 +180,8 @@ const HomeStack = createStackNavigator({
       })
     },
 
-    Profile: {
-        screen: ProfileStack ,
+    Information: {
+        screen: informationScreen,
         navigationOptions:{
           tabBarLabel:"Info",
           tabBarIcon: ({ tintColor }) => (

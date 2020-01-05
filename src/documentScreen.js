@@ -108,14 +108,13 @@ class documentScreen extends Component {
 
 
           <View style={styles.cardLast}>
-          <View style={styles.leftcolumlast}>
-            <Text style={styles.textLast}>Meer documenten lezen?</Text>
-            <Button title={'klik hier'}  color="#095382"/>
-          </View>
-            <View style={styles.rightcolumlast}>
-              <Image source={require( './assets/images/all/crocodile.png')} style={{marginBottom: -20,}}/>
+            <View style={styles.leftcolumlast}>
+              <Text style={styles.textLast}>Specifieke{"\n"}vraag{"\n"}over iets?</Text>
+              <Button title={'klik hier'}  color="#095382"/>
             </View>
-
+            <View style={styles.rightcolumlast}>
+               <Image source={require( './assets/images/all/crocodile-great.png')} style={{ marginBottom: -20,width: 140, height: 142}}/>
+            </View>
           </View>
 
           </View>
@@ -198,7 +197,7 @@ class documentScreen extends Component {
       width: '50%',
       paddingTop:10,
       paddingLeft:10,
-      paddingBottom: -20,
+      paddingBottom: -30,
     },
     textLast:{
       color: 'white',
